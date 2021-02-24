@@ -1,12 +1,15 @@
 /*ABSTRACS*/
 @import "abstracts/mixins";
 @import "abstracts/variables";
+/*VENDORS*/
+@import "vendors/slick";
 /*BASE*/
 @import "base/base";
 @import "base/typography";
 /*COMPONENTS*/
 @import "components/banner";
 @import "components/benefits";
+@import "components/carousel";
 @import "components/event";
 @import "components/figure";
 @import "components/icon";
@@ -24,7 +27,5 @@
 /*PAGES*/
 @import "pages/golf";
 @import "pages/home";
-
-
 
 @import "base/utils";
