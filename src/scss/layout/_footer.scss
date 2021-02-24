@@ -1,0 +1,35 @@
+.footer{
+  background: rgba($gray-color,.1);
+  padding: 3rem 10.625rem 3.125rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto 12.5rem auto;
+  row-gap: 3rem;
+  &__brand{}
+  &__contact{
+    display: flex;  
+    justify-content: space-between;  
+  }
+  &__schedule{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+  &__networks{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  &__detail{
+  }
+  &__list-contact{
+    li{
+      font-size: 1.5rem;
+    }
+  }
+  &__list-season{
+    li:first-child{
+      margin-bottom: .5rem;
+    }
+  }
+}

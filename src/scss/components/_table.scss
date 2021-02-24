@@ -1,0 +1,21 @@
+.table{
+  width: 100%;
+  font-family: inherit;
+  border-spacing: 0;
+  margin-top: 6rem;
+  th{
+    text-align: left;
+    text-transform: uppercase;
+    color: $gray-color;
+    padding: .6rem 1rem;
+  }
+  td{
+    padding: .6rem 1rem 1rem;
+    border-top: 1px solid $gray-color;
+  }
+  &__row{
+  }
+  &__title{
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,20 @@
+.golf{
+  &__hole{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 681px;
+    background: $gray-dark-color;
+    max-height: 681px;
+  }
+  &__article{
+    color: $white-color;
+    padding: 4.6875rem 10.625rem 0;
+    overflow-y: scroll;
+  }
+  &__figure{
+  }
+  &__image{
+    max-width: 100%;
+  }
+}

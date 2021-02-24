@@ -1,0 +1,22 @@
+.home{
+  &__header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/Benona_Home_header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .heading-1{
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align: center;
+      color: $white-color;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__article{
+    padding: 11.5625rem 0 10rem 10.9375rem;
+    max-width: 55%;
+  }
+}

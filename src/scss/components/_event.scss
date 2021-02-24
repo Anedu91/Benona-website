@@ -1,0 +1,19 @@
+.event{
+  margin-top: 5rem;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  &__item{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 2rem 0;
+    &:not(:last-child){
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+  &__article{
+    max-width: 65%;
+  }
+  &__paragraph{
+    text-transform: uppercase;
+  }
+}

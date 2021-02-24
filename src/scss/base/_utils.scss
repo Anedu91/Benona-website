@@ -1,0 +1,34 @@
+/*MARGIN*/
+.mt{
+  &-sm{
+    margin-top: 1rem;
+  }
+  &-md{
+    margin-top: 2rem;
+  }
+  &-lg{
+    margin-top: 4rem;
+  }
+}
+.mr{
+  &-xs{
+    margin-right: .5rem;
+  }
+}
+/*PADDING*/
+.pl{
+  &-sm{
+    padding-left: 5rem;
+  }
+}
+/*TEXT ALIGN*/
+.text-center{
+  text-align: center;
+}
+/*DISPLAY*/
+.flex{
+  display: flex;
+  &--center{
+    justify-content: center;
+  }
+}

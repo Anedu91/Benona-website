@@ -1,0 +1,75 @@
+.rates{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  /*TABS NAVIGATION*/
+  &__nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.125rem;
+  }
+  &__nav-item{
+    &:not(:last-child){
+      margin-right: 4.375rem;
+    }
+  }
+  &__nav-button{
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .35rem 0;
+    cursor: pointer;
+    &.active{
+      font-weight: 700;
+      border-bottom: 2px solid $black-color;
+
+    }
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;
+  }
+  /*ITEMS*/
+
+&__item{
+  box-shadow: 0 1px 12px rgba($black-color, .11);
+}
+&__header{
+  padding: 1.875rem;
+  background: $secondary-color;
+}
+&__body{
+  padding: 0 1.875rem;
+  padding-bottom: 2rem;
+}
+&__body-item{
+  padding: 1.875rem 0 1.875rem;
+  &:not(:last-child){
+    border-bottom: 1px solid #D8D8D8;
+  }
+}
+&__list{
+  margin-top: 1rem;
+  display: flex;
+  list-style: none;
+}
+&__list-item{
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child){
+    margin-right: 3.125rem;
+  }
+}
+&__paragraph{
+  font-weight: 700;
+}
+&__small{
+  font-size: .8rem;
+}
+&__price{
+  font-family: $heading-font;
+  font-size: 1.8rem;
+}
+}

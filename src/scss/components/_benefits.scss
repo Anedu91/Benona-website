@@ -1,0 +1,44 @@
+.benefits{
+  &__row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    span:last-child{
+      background: $secondary-color;
+    }
+    &.separation{
+      border-bottom: 2px solid $black-color;
+    }
+    &.item{
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+  &__cell{
+    display: flex;
+    padding: 1.45rem 1rem .75rem;
+    align-items: center;
+    &--big{
+      padding: 3.567rem 1.875rem;
+    }
+    &.title{
+      padding-left: 0;
+    }
+  }
+  &__icon{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+  }
+  &__title{
+    font-size: 2.4rem;
+    font-family: $heading-font;
+    padding: 2rem 1rem;
+  }
+  &__sub-title{
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 700;
+    &.padding-top{
+      padding-top: 5rem;
+    }
+  }
+}
