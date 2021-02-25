@@ -16,7 +16,17 @@
   }
 
   &__article{
-    padding: 11.5625rem 0 10rem 10.9375rem;
-    max-width: 55%;
+    padding: 3.375rem 1.6875rem 4.625rem 3.375rem;
+    
+    @include respond-above(sm){
+      padding: 6.625rem 0 4.625rem 2.625rem;
+      max-width: 55%;
+    }
+    @include respond-above(md){
+      padding: 6.625rem 0 4.625rem 4.625rem;
+    }
+    @include respond-above(lg){
+      padding: 11.5625rem 0 10rem 10.9375rem;
+    }
   }
 }

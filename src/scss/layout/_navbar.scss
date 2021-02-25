@@ -1,16 +1,23 @@
 .navbar{
   display: flex;
-  padding: 2.5rem 10.625rem;
+  padding: 2.5rem 2.625rem;
   align-items: center;
   background: none;
-  &__brand{
+  @include respond-above(md){
+    padding: 2.5rem 4.625rem;
+  }
+  @include respond-above(lg){
+    padding: 2.5rem 10.625rem;
   }
   &__nav{
     flex: 1;
-    display: flex;
+    display: none;
     list-style: none;
     justify-content: center;
     align-items: center;
+    @include respond-above(sm){
+      display: flex;
+    }
   }
   &__item{
     &:first-child{

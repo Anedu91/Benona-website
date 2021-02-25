@@ -6,7 +6,16 @@
     box-sizing: inherit;
 }
 html{
-    font-size: 87.5%;
+    // font-size: 62.5%;
+    font-size: 75%;
+    @include respond-above(sm){
+    }
+    @include respond-above(md){
+        font-size: 87.5%;
+    }
+    @include respond-above(xl){
+        font-size: 100%;
+    }
 }
 body{
     box-sizing: border-box;

@@ -1,5 +1,6 @@
 .figure {
   display: flex;
+  flex-direction: column;
   &__caption {
     padding-left: 10.65rem;
     color: #9da0a2;

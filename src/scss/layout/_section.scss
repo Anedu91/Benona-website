@@ -1,5 +1,8 @@
 .section{
-  padding: 8.75rem 10.625rem 3.125rem;
+  padding: 8.75rem 4.625rem 3.125rem;
+  @include respond-above(lg){
+    padding: 8.75rem 10.625rem 3.125rem;
+  }
   &--gray{    
     background: rgba($gray-color,.1);
   }

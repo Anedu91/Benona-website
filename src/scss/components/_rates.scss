@@ -20,6 +20,9 @@
     font-size: 1rem;
     padding: .35rem 0;
     cursor: pointer;
+    &:focus{
+      outline: none;
+    }
     &.active{
       font-weight: 700;
       border-bottom: 2px solid $black-color;
@@ -29,7 +32,18 @@
   &__container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1.875rem;
+    column-gap: 1.875rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    .rates__item{
+      grid-column: 2/3;
+    }
+  }
+  &__toggle{
+    display: none;
+    &.active{
+      display: block;
+    }
   }
   /*ITEMS*/
 
@@ -45,9 +59,12 @@
   padding-bottom: 2rem;
 }
 &__body-item{
-  padding: 1.875rem 0 1.875rem;
-  &:not(:last-child){
+  padding: 1.875rem 0 1rem;
+  &:first-child{
     border-bottom: 1px solid #D8D8D8;
+  }
+  &:nth-child(2){
+    margin-bottom: 2rem;
   }
 }
 &__list{

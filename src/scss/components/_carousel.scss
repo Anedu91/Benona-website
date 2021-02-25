@@ -1,7 +1,54 @@
 .carousel {
   position: relative;
 
-  .slick-dots {
+  .slick-dots{
     position: absolute;
+    bottom: 1.5rem;  
+    left: 50%;
+    transform: translateX(-50%);  
+    display: flex;
+    li{
+      &:not(:last-child){
+        margin-right: .5rem;
+      }
+      button{
+        position: relative;
+        background: transparent;
+        border: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        outline: none;
+        line-height: 0;
+        font-size: 0;
+        cursor: pointer;
+        &:hover, &:focus{
+          &:before{
+            opacity: 0.55;
+          }
+        }
+        &:before{
+          content: '\2022';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 1.5rem;
+          width: 1.5rem;
+          font-size: 2rem;
+          color: $white-color;
+        }
+      }
+    }
+    &.slick-active button:before{
+      opacity: .5;
+    }
+  }
+}
+.carousel-rate{
+  width: 100%;
+  &__item{
+    margin-bottom: 1rem;
+    &:not(:last-child){
+      padding-right: 1.875rem;
+    }
   }
 }
