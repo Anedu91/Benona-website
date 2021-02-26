@@ -44,6 +44,7 @@
     background: $white-color;
     border-bottom: 2px solid $black-color;
     @include respond-above(sm){
+      border-bottom: 0;
       position: relative;
       top: unset;
       background: transparent;
@@ -109,8 +110,11 @@
   }
   &__sub-title{
     text-transform: uppercase;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     font-weight: 700;
+    @include respond-above(sm){
+      padding: 1rem 0;
+    }
     &.padding-top{
       @include respond-above(sm){
         padding-top: 5rem;        

@@ -7,7 +7,11 @@
     margin-top: 2rem;
   }
   &-lg{
-    margin-top: 4rem;
+    margin-top: 1rem;
+    @include respond-above(sm){
+      margin-top: 4rem;
+
+    }
   }
 }
 .mr{

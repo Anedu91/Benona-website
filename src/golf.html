@@ -17,7 +17,7 @@
             class="logo--header"
           />
         </a>
-        <div class="navbar__nav">
+        <div class="navbar__nav mobile">
           <ul class="navbar__navigation">
             <li class="navbar__item">
               <a href="golf.html" class="navbar__link">golf</a>
@@ -42,20 +42,27 @@
               >
             </li>
           </ul>
+          <button class="navbar__close">
+            <svg><use xlink:href="images/sprite.svg#icon-x"></use></svg>
+          </button>
         </div>
+        <button class="navbar__toggle">
+          <svg><use xlink:href="images/sprite.svg#icon-menu"></use></svg>
+        </button>
       </nav>
       <article class="header__article">
         <h1 class="heading-2">
           Immaculate grounds, rolling hills, and undulating fast greens combine
           to create a memorable experience with each round of golf.
         </h1>
-        <figure class="header__figure">
+        <picture class="figure header__figure">
+          <source srcset="images/Benona_Golf_Header.jpg" media="(min-width: 528px)"/>
           <img
-            src="images/Benona_Golf_Header.jpg"
+            src="images/Golf_Header_Mobile.jpg"            
             alt="Benona Golf Park"
             class="header__image"
           />
-        </figure>
+        </picture>
       </article>
     </header>
     <main>
@@ -235,7 +242,7 @@
           </table>
           <button class="golf__button">Load All</button>
         </article>
-        <figure class="golf__figure">
+        <figure class="golf__figure">          
           <img
             src="images/Benona_Golf_Map.svg"
             alt="Golf map"
@@ -243,9 +250,10 @@
           />
         </figure>
       </section>
-      <figure>
-        <img src="images/Benona_Golf_Events.jpg" alt="Benona Park" />
-      </figure>
+      <picture>
+        <source srcset="images/Benona_Golf_Events.jpg" media="(min-width: 320px)"/>
+        <img src="images/Golf_Events_Mobile.png" alt="Benona Park" />
+      </picture>
       <section class="section">
         <h2 class="heading-2 text-center">Annual Events</h2>
         <ul class="event">
@@ -413,6 +421,7 @@
         </li>
       </ul>
     </footer>
+    <script src="js/main.js"></script>
     <script>
       /*AUTO MAP HEIGHT */
       const $golfImage = document.querySelector(".golf__image");
@@ -447,17 +456,20 @@
         });
       };
       
-      const calculatinghHeight = () => {
+      const calculatinghHeight = async () => {
         if (breakQuery.matches) {
-          const imageHeight = $golfImage.getBoundingClientRect().height;
-          $golfSection.style.maxHeight = `${imageHeight}px`;
+          const imageHeight = await $golfImage.getBoundingClientRect().height;
+          
+          $golfSection.style.height = `${imageHeight}px`;
           removinghidding(tableItems)
         } else {
           $golfSection.style.height = `auto`;
           hiddingItems(tableItems, maxItems);
         }
       };      
-      
+      window.onload = () => {
+        calculatinghHeight();
+      }
       document.addEventListener("DOMContentLoaded", () => {
         $loadButton.addEventListener("click", () => {
           showingItems($tableParent.querySelectorAll(".hidden"), maxItems);

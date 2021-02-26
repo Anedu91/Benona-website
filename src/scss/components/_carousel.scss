@@ -3,10 +3,13 @@
 
   .slick-dots {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    @include respond-above(sm){
+      bottom: 1.5rem;
+    }
     li {
       &:not(:last-child) {
         margin-right: 0.5rem;
@@ -47,7 +50,10 @@
 .carousel-rate {
   width: 100%;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  @include respond-above(sm){
+    padding: 0 1rem;
+
+  }
   &__item {
     margin-bottom: 1rem;
     &:not(:last-child) {

@@ -34,7 +34,7 @@
   }
   &__container {
     display: grid;
-    grid-template-columns: 75%;
+    grid-template-columns: 90%;
     justify-content: center;
     margin-bottom: 2rem;
     @include respond-above(sm) {

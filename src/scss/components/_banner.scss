@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 22rem;
+  min-height: 30rem;
   @include respond-above(sm){
     padding: 6.875rem 10rem;
     min-height: auto;
@@ -19,6 +19,16 @@
       margin-bottom: 2rem;
       margin-top: 0;
     }   
+  }
+
+  &--top{
+    padding: 1rem;
+    background: rgba(#9DA0A2, .11);
+  }
+  &__title{
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 2px;
   }
 
   &__nav{

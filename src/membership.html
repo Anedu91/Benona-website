@@ -17,7 +17,7 @@
             class="logo--header"
           />
         </a>
-        <div class="navbar__nav">
+        <div class="navbar__nav mobile">
           <ul class="navbar__navigation">
             <li class="navbar__item">
               <a href="golf.html" class="navbar__link">golf</a>
@@ -42,20 +42,27 @@
               >
             </li>
           </ul>
+          <button class="navbar__close">
+            <svg><use xlink:href="images/sprite.svg#icon-x"></use></svg>
+          </button>
         </div>
+        <button class="navbar__toggle">
+          <svg><use xlink:href="images/sprite.svg#icon-menu"></use></svg>
+        </button>
       </nav>
       <article class="header__article">
         <h1 class="heading-2">
           Enjoy golf within our relaxed, friendly and family-enriched community
           throughout the Spring, Summer and Fall months.
         </h1>
-        <figure class="header__figure">
+        <picture class="header__figure">
+          <source srcset="images/Benona_Membership_Header.jpg" media="(min-width: 529px)"/>
           <img
-            src="images/Benona_Membership_Header.jpg"
+            src="images/Membership_Header_Mobile.jpg"
             alt="Benona Golf Park"
             class="header__image"
           />
-        </figure>
+        </picture>
       </article>
     </header>
     <main>
@@ -81,12 +88,13 @@
               <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
         </div>
       </section>
-      <figure class="figure">
-        <img src="images/Benona_Membership_Oceana.png" alt="Benona Park" />
+      <picture class="figure">
+        <source srcset="images/Benona_Membership_Oceana.png" media="(min-width: 321px)"/>
+        <img src="images/Membership_Oceana_Mobile.png" alt="Benona Park" />
         <figcaption class="figure__caption">
           Aerial Photo of Oceana Golf Course
         </figcaption>
-      </figure>
+      </picture>
       <section class="section section--table">
         <ul class="benefits">
           <!-- HEADER -->
@@ -347,5 +355,6 @@
         </li>
       </ul>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>

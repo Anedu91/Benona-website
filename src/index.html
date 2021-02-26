@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="home">
+    <div class="banner--top">
+      <h2 class="banner__title text-center">
+        Notice: Banner For Announcements
+      </h2>
+    </div>
     <header class="home__header">
       <nav class="navbar">
         <a href="index.html" class="navbar__brand">
@@ -17,7 +22,7 @@
             class="logo--header"
           />
         </a>
-        <div class="navbar__nav">
+        <div class="navbar__nav mobile">
           <ul class="navbar__navigation">
             <li class="navbar__item">
               <a href="golf.html" class="navbar__link">golf</a>
@@ -42,7 +47,13 @@
               >
             </li>
           </ul>
+          <button class="navbar__close">
+            <svg><use xlink:href="images/sprite.svg#icon-x"></use></svg>
+          </button>
         </div>
+        <button class="navbar__toggle">
+          <svg><use xlink:href="images/sprite.svg#icon-menu"></use></svg>
+        </button>
       </nav>
       <h1 class="heading-1">Discover a Hidden Gem.</h1>
     </header>
@@ -63,11 +74,12 @@
             hours.
           </p>
         </article>
-        <figure class="section__figure">
-          <img src="images/Benona_Home_2.jpg" alt="Benona golf park" />
-        </figure>
+        <picture class="section__figure">
+          <source srcset="images/Benona_Home_2.jpg" media="(min-width: 640px)"/>
+          <img src="images/Home_Rates_Mobile.jpg" alt="Benona golf park" />
+        </picture>
       </section>
-      <section class="section">
+      <section class="section section--npadding">
         <h2 class="heading-2 text-center">Daily Rates</h2>
         <div class="rates">
           <ul class="rates__nav">
@@ -384,6 +396,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/vendors/slick.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
       $(".carousel-rate").slick({
         arrows: false,
@@ -404,11 +417,13 @@
               dots: true,
               centerMode: true,
               infinite: false,
+              centerPadding: '18px'
             },
           },
         ],
       });
 
+     
       const $rateButtons = document.querySelectorAll(".rates__nav-button");
       const $rateToggles = document.querySelectorAll(".rates__toggle");
       const removeActive = (elements) => {
@@ -417,6 +432,7 @@
         });
       };
 
+      
       $rateButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
           removeActive($rateButtons);

@@ -3,7 +3,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-row: 3;
+  margin-top: 2rem;
+ 
   @include respond-above(sm){
     padding-left: 5rem;
+    grid-row: auto;
+    margin-top: 0;
+    
+  }
+  &__item{
+    &:not(:last-child){
+      margin-bottom: 2rem;
+      @include respond-above(sm){
+        margin-bottom: 0;
+      }
+    }
   }
 }

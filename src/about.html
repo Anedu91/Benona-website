@@ -17,7 +17,7 @@
             class="logo--header"
           />
         </a>
-        <div class="navbar__nav">
+        <div class="navbar__nav mobile">
           <ul class="navbar__navigation">
             <li class="navbar__item">
               <a href="golf.html" class="navbar__link">golf</a>
@@ -42,20 +42,27 @@
               >
             </li>
           </ul>
+          <button class="navbar__close">
+            <svg><use xlink:href="images/sprite.svg#icon-x"></use></svg>
+          </button>
         </div>
+        <button class="navbar__toggle">
+          <svg><use xlink:href="images/sprite.svg#icon-menu"></use></svg>
+        </button>
       </nav>
       <article class="header__article">
         <h1 class="heading-2">
           Our legacy isn't defined by the grounds themselves but by the people
           who have built, walked, and played Benona Shores.
         </h1>
-        <figure class="header__figure">
+        <picture class="header__figure">
+          <source srcset="images/Benona_About_Header.jpg" media="(min-width: 529px)"/>
           <img
-            src="images/Benona_About_Header.jpg"
+            src="images/About_Header_Mobile.jpg"
             alt="Benona Golf Park"
             class="header__image"
           />
-        </figure>
+        </picture>
       </article>
     </header>
     <main>
@@ -85,24 +92,28 @@
       </section>
       <div class="carousel">
         <div>
-          <figure class="figure">
-            <img src="images/Benona_About_History.jpg" alt="Benona Park" />
-          </figure>
+          <picture class="figure">
+            <source srcset="images/Benona_About_History.jpg" media="(min-width: 640px)"/>
+            <img src="images/About_History_Mobile.png" alt="Benona Park" />
+          </picture>
         </div>
         <div>
-          <figure class="figure">
-            <img src="images/Benona_About_History.jpg" alt="Benona Park" />
-          </figure>
+          <picture class="figure">
+            <source srcset="images/Benona_About_History.jpg" media="(min-width: 640px)"/>
+            <img src="images/About_History_Mobile.png" alt="Benona Park" />
+          </picture>
         </div>
         <div>
-          <figure class="figure">
-            <img src="images/Benona_About_History.jpg" alt="Benona Park" />
-          </figure>
+          <picture class="figure">
+            <source srcset="images/Benona_About_History.jpg" media="(min-width: 640px)"/>
+            <img src="images/About_History_Mobile.png" alt="Benona Park" />
+          </picture>
         </div>
         <div>
-          <figure class="figure">
-            <img src="images/Benona_About_History.jpg" alt="Benona Park" />
-          </figure>
+          <picture class="figure">
+            <source srcset="images/Benona_About_History.jpg" media="(min-width: 640px)"/>
+            <img src="images/About_History_Mobile.png" alt="Benona Park" />
+          </picture>
         </div>
       </div>
 
@@ -226,6 +237,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/vendors/slick.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
       $(".carousel").slick({
         arrows: false,

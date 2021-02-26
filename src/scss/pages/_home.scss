@@ -3,9 +3,12 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(../images/Benona_Home1_header.jpg);
+    background-image: url(../images/Home_Hero_Mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    @include respond-above(md){
+      background-image: url(../images/Benona_Home_header.jpg);
+    }
     .heading-1{
       margin-top: auto;
       margin-bottom: auto;

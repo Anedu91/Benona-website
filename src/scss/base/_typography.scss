@@ -34,8 +34,11 @@ body {
   }
 }
 .paragraph {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  @include respond-above(sm){
+    font-size: 1rem;
+  }
   &--big {
     font-size: 1.4rem;
     margin-top: 0.25rem;

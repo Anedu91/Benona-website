@@ -21,6 +21,7 @@
     background: rgba($gray-color,.1);
     display: grid;
     grid-template-columns: 1fr;
+    row-gap: 2rem;
     @include respond-above(sm){
       grid-template-columns: 2fr 1fr;
     }
@@ -43,6 +44,15 @@
     @include respond-below(sm){
       padding: 0;
     }
+  }
+  &--npadding{
+    @extend %section;
+    @include respond-below(sm){
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+
   }
   &__column{
     display: flex;
