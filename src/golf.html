@@ -450,15 +450,14 @@
       const calculatinghHeight = () => {
         if (breakQuery.matches) {
           const imageHeight = $golfImage.getBoundingClientRect().height;
-          $golfSection.style.height = `${imageHeight}px`;
+          $golfSection.style.maxHeight = `${imageHeight}px`;
           removinghidding(tableItems)
         } else {
           $golfSection.style.height = `auto`;
           hiddingItems(tableItems, maxItems);
         }
-      };
+      };      
       
-      calculatinghHeight();
       document.addEventListener("DOMContentLoaded", () => {
         $loadButton.addEventListener("click", () => {
           showingItems($tableParent.querySelectorAll(".hidden"), maxItems);
