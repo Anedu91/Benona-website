@@ -31,12 +31,14 @@
   }
   &__container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1.875rem;
+    grid-template-columns: 85%;
     justify-content: center;
     margin-bottom: 1rem;
-    .rates__item{
-      grid-column: 2/3;
+    @include respond-above(sm){
+      grid-template-columns: repeat(3,1fr);
+      .rates__item{
+        grid-column: 2/3;
+      }
     }
   }
   &__toggle{

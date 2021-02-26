@@ -3,4 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include respond-above(sm){
+    padding-left: 5rem;
+  }
 }

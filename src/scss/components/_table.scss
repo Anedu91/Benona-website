@@ -3,19 +3,22 @@
   font-family: inherit;
   border-spacing: 0;
   margin-top: 6rem;
+  margin-bottom: 1rem;
   th{
     text-align: left;
     text-transform: uppercase;
     color: $gray-color;
     padding: .6rem 1rem;
+    border-bottom: 1px solid $gray-color;
   }
   td{
-    padding: .6rem 1rem 1rem;
-    border-top: 1px solid $gray-color;
-  }
-  &__row{
-  }
+    padding: 1rem 1rem 1.2rem;
+    border-bottom: 1px solid $gray-color;
+  }  
   &__title{
     text-transform: uppercase;
+  }
+  .hidden{
+    display: none;
   }
 }

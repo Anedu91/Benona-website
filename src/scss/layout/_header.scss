@@ -1,9 +1,18 @@
 .header{
   &__article{
-    padding: 2.5rem 10.625rem;
+    padding: 2.5rem 1.6875rem;
+    @include respond-above(sm){
+      padding: 2.5rem 4.625rem;
+    }
+    @include respond-above(md){
+      padding: 2.5rem 10.625rem;
+    }
   }
   .heading-2{
-    max-width: 65%;
+    @include respond-above(sm){
+      max-width: 65%;
+
+    }
   }
   &__figure{
     margin-top: 2rem;

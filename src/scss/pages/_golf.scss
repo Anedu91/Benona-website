@@ -2,19 +2,64 @@
   &__hole{
     position: relative;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 851px;
+    grid-template-columns: 1fr;
     background: $gray-dark-color;
+    @include respond-above(md){
+      grid-template-columns: 1.5fr 1fr;
+    }
     
   }
   &__article{
     color: $white-color;
-    padding: 4.6875rem 10.625rem 0;
-    overflow-y: scroll;
+    padding: 4.6875rem 1.6875rem 0;
+    
+    
+    @include respond-above(sm){
+      padding: 4.6875rem 4.625rem 0;
+    }
+    @include respond-above(lg){
+      padding: 4.6875rem 10.625rem 0;
+      overflow-y: scroll;
+      max-height: 99%;
+    }
+    &::-webkit-scrollbar {
+      width: 8px;
+    }    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: $gray-dark-color; 
+    }     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #d8d8d8; 
+    }    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    
   }
+}
   &__figure{
   }
   &__image{
     max-width: 100%;
+  }
+  &__button{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    background: transparent;
+    border: none;
+    color: $white-color;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $white-color;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+
+    &.hidden{
+      display: none;
+    }
   }
 }

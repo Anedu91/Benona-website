@@ -45,7 +45,7 @@
           <p class="paragraph mt-sm">Due to the shorter yardage length, Benona Shores Golf Club presents a great opportunity for golfers of all levels. Whether you're just starting off in the game or have been playing for an entire lifetime, Benona Shores is an environment where everyone feels welcomed. With 3 tee marker options for each hole, the level of challenge for the round is up to the individual.</p>
           
         </article>
-        <ul class="summary pl-sm">
+        <ul class="summary">
           <li class="summary__item">
             <h3 class="heading-5">distance</h3>
             <p class="paragraph--big">4380yds</p>
@@ -201,6 +201,7 @@
               <td>363</td>
             </tr>            
           </table>
+          <button class="golf__button">Load All</button>
         </article>
         <figure class="golf__figure">
           <img src="images/Benona_Golf_Map.svg" alt="Golf map" class="golf__image">
@@ -332,5 +333,55 @@
                 </li>
             </ul>
     </footer>
+    <script>
+      /*AUTO MAP HEIGHT */
+      const $golfImage = document.querySelector('.golf__image');
+      const $golfSection = document.querySelector('.golf__hole');
+      const breakQuery = window.matchMedia("(min-width: 998px)");
+      const calculatinghHeight = () => {
+        if (breakQuery.matches){
+          const imageHeight = $golfImage.getBoundingClientRect().height;
+          $golfSection.style.height = `${imageHeight}px`;
+        }else{
+          $golfSection.style.height = `auto`;
+        }
+      }
+      
+      /*LOAD MORE TABLE INPUTS*/
+      const $tableParent = document.querySelector('.table');
+      const tableItems = $tableParent.querySelectorAll('tr');
+      const maxItems = 11;
+      const $loadButton = document.querySelector('.golf__button');
+      
+      const hiddingItems = (items, maxItems) => {
+        [].forEach.call(items, (item, idx) => {
+          if (idx > maxItems - 1){
+            item.classList.add('hidden');
+          }
+        })
+      }
+      const showingItems = (items, maxItems) => {
+        [].forEach.call(items, (item, idx) => {
+          if (idx < maxItems - 1){
+            item.classList.remove('hidden');
+          }
+        })
+      }
+      document.addEventListener('DOMContentLoaded', ( ) => {
+        
+          calculatinghHeight();
+          
+          hiddingItems(tableItems,maxItems);
+          $loadButton.addEventListener('click', () => {
+            showingItems($tableParent.querySelectorAll('.hidden'), maxItems);
+            $loadButton.classList.add('hidden');
+          })
+          window.addEventListener('resize',() => {
+            calculatinghHeight()            
+          })
+        
+      })      
+      
+    </script>
 </body>
 </html>

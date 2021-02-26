@@ -1,10 +1,14 @@
 .footer{
   background: rgba($gray-color,.1);
-  padding: 3rem 4.625rem 3.125rem;
+  padding: 3rem 1.6875rem 3.125rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 12.5rem auto;
   row-gap: 3rem;
+  @include respond-above(sm){
+    grid-template-columns: 1fr 2fr;
+    padding: 3rem 4.625rem 3.125rem;
+  }
   @include respond-above(md){
     grid-template-columns: repeat(2,1fr);
   }
@@ -15,18 +19,45 @@
   &__contact{
     display: flex;  
     justify-content: space-between;  
+    flex-wrap: wrap;
+    @include respond-above(sm){
+      flex-wrap: nowrap;
+    }
   }
   &__schedule{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 1rem;
     justify-content: space-between;
+    @include respond-above(sm){
+      flex-wrap: nowrap;
+    }
   }
   &__networks{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    @include respond-above(sm){
+      flex-direction: row;
+    }
+
+    li{
+      &:not(:last-child){
+        margin-bottom: 1rem;
+        @include respond-above(sm){
+          margin-bottom: 0;
+        }
+      }
+    }
     
   }
   &__detail{
+    &:not(:last-child){
+      margin-bottom: 2rem;
+      @include respond-above(sm){
+        margin-bottom: 0;
+      }
+    }
   }
   &__list-contact{
     li{
@@ -34,8 +65,20 @@
     }
   }
   &__list-season{
-    li:first-child{
-      margin-bottom: .5rem;
+    flex: 0 0 50%;
+    margin-bottom: 2rem;
+    @include respond-above(sm){
+      flex: auto;
+      margin-bottom: 0;
     }
+    li:first-child{
+      margin-bottom: .5rem;      
+    }
+  }
+  &__copy{
+   grid-row: 6; 
+   @include respond-above(sm){
+     grid-row: auto;
+   }
   }
 }

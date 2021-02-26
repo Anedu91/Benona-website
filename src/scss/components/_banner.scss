@@ -1,13 +1,24 @@
 .banner{
-  padding: 6.875rem 10rem;
+  padding: 2.875rem 1.6875rem 2.875rem;
   background: $primary-color;
   color: $white-color;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 22rem;
+  @include respond-above(sm){
+    padding: 6.875rem 10rem;
+    min-height: auto;
+  }
   .heading-2{
-    margin-bottom: 2rem;
-    text-align: center;
+    text-align: center; 
+    margin-top: auto;
+    margin-bottom: auto;
+    @include respond-above(sm){
+      margin-bottom: 2rem;
+      margin-top: 0;
+    }   
   }
 
   &__nav{

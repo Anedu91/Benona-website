@@ -349,7 +349,7 @@
           </ul>
         </div>
       </div>
-      <p>
+      <p class="footer__copy">
         Copyright 2021. <br />
         Benona Shores Golf Course
       </p>
@@ -376,6 +376,22 @@
         arrows: false,
         dots: false,
         slidesToShow: 3,
+				responsive:[
+					{
+					breakpoint: 768,
+					settings:{
+						slidesToShow: 3,
+						}
+					},
+					{
+						breakpoint:600,
+						settings:{
+							slidesToShow: 1,
+							slidestoScroll: 1,
+							dots: true
+						}
+					}					
+				]
       });
 
 			const $rateButtons = document.querySelectorAll(".rates__nav-button");

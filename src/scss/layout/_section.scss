@@ -1,8 +1,14 @@
-.section{
-  padding: 8.75rem 4.625rem 3.125rem;
+%section{
+  padding: 3.375rem 1.6875rem 3.125rem;
+  @include respond-above(sm){
+    padding: 8.75rem 4.625rem 3.125rem;
+  }
   @include respond-above(lg){
     padding: 8.75rem 10.625rem 3.125rem;
   }
+}
+.section{
+  @extend %section;
   &--gray{    
     background: rgba($gray-color,.1);
   }
@@ -11,24 +17,41 @@
     color: $white-color;
   }
   &--grid{
-    padding: 8.75rem 10.625rem 3.125rem;
+    @extend %section;
     background: rgba($gray-color,.1);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    @include respond-above(sm){
+      grid-template-columns: 2fr 1fr;
+    }
+    @include respond-above(md){
+      grid-template-columns: 1fr 1fr;
+    }
   }
   &--grid-3{
-    padding: 8.75rem 10.625rem 3.125rem;
+    @extend %section;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr;
+    @include respond-above(sm){
+      grid-template-columns: repeat(3,1fr);
+    }
   }  
   &--banner{
     padding-top: 0;
+  }
+  &--table{
+    @include respond-below(sm){
+      padding: 0;
+    }
   }
   &__column{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 7rem;
+    @include respond-above(md){
+      padding-left: 7rem;
+
+    }
   }
   &__figure{
     img{
@@ -36,13 +59,27 @@
     }
   }
   &__article{
-    padding-right: 6.5rem;
+    margin-bottom: 1rem;
+    @include respond-above(sm){
+      padding-right: 6.5rem;
+      margin-bottom: 0;
+    }
   }
   &__card{
     text-align: center;
-    padding: 0 4.125rem 1rem;
+    padding: 2rem 4.125rem 2rem;
+    @include respond-above(sm){
+      padding: 0 2.125rem 1rem;
+    }
+    @include respond-above(md){
+      padding: 0 4.125rem 1rem;
+    }
     &:not(:last-child){
-      border-right: 1px solid $black-color;
+      border-bottom: 1px solid $black-color;
+      @include respond-above(sm){
+        border-right: 1px solid $black-color;
+        border-bottom: 0;
+      }
     }
     .heading-2{
       padding: 0 1rem;
