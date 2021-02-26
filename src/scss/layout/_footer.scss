@@ -81,4 +81,10 @@
      grid-row: auto;
    }
   }
+  &__sep{
+    display: none;
+    @include respond-above(sm){
+      display: block;
+    }
+  }
 }

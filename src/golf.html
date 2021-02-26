@@ -92,8 +92,7 @@
           <a href="#" class="link--flex"
             >Download Score Card
             <svg class="link__icon">
-              <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-          ></a>
+              <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
         </div>
       </section>
       <section class="golf__hole">
@@ -263,8 +262,7 @@
               <a href="#" class="link--flex"
                 >Download Score Card
                 <svg class="link__icon">
-                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-              ></a>
+                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
             </article>
           </li>
           <li class="event__item">
@@ -277,8 +275,7 @@
               </p>
               <a href="#" class="link--flex"
                 >Learn More<svg class="link__icon">
-                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-              ></a>
+                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
             </article>
           </li>
           <li class="event__item">
@@ -291,8 +288,7 @@
               </p>
               <a href="#" class="link--flex"
                 >Learn More<svg class="link__icon">
-                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-              ></a>
+                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
             </article>
           </li>
           <li class="event__item">
@@ -305,8 +301,7 @@
               </p>
               <a href="#" class="link--flex"
                 >Learn More<svg class="link__icon">
-                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-              ></a>
+                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
             </article>
           </li>
           <li class="event__item">
@@ -320,8 +315,7 @@
               </p>
               <a href="#" class="link--flex"
                 >Learn More<svg class="link__icon">
-                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg
-              ></a>
+                  <use xlink:href="images/sprite.svg#arrow-icon"></use></svg></a>
             </article>
           </li>
         </ul>
@@ -382,7 +376,7 @@
           </ul>
         </div>
       </div>
-      <div class=""></div>
+      <div class="footer__sep"></div>
       <div class="">
         <h4 class="heading-4">hours</h4>
         <div class="footer__schedule">
@@ -403,7 +397,7 @@
           </ul>
         </div>
       </div>
-      <p>
+      <p class="footer__copy">
         Copyright 2021. <br />
         Benona Shores Golf Course
       </p>
@@ -424,14 +418,7 @@
       const $golfImage = document.querySelector(".golf__image");
       const $golfSection = document.querySelector(".golf__hole");
       const breakQuery = window.matchMedia("(min-width: 998px)");
-      const calculatinghHeight = () => {
-        if (breakQuery.matches) {
-          const imageHeight = $golfImage.getBoundingClientRect().height;
-          $golfSection.style.height = `${imageHeight}px`;
-        } else {
-          $golfSection.style.height = `auto`;
-        }
-      };
+      
 
       /*LOAD MORE TABLE INPUTS*/
       const $tableParent = document.querySelector(".table");
@@ -446,6 +433,12 @@
           }
         });
       };
+      const removinghidding = (items) => {
+        [].forEach.call(items, (item, idx) => {
+          item.classList.remove("hidden");
+        })
+      }
+      
       const showingItems = (items, maxItems) => {
         [].forEach.call(items, (item, idx) => {
           if (idx < maxItems - 1) {
@@ -453,10 +446,24 @@
           }
         });
       };
+      
+      const calculatinghHeight = () => {
+        if (breakQuery.matches) {
+          const imageHeight = $golfImage.getBoundingClientRect().height;
+          $golfSection.style.height = `${imageHeight}px`;
+          removinghidding(tableItems)
+        } else {
+          $golfSection.style.height = `auto`;
+          hiddingItems(tableItems, maxItems);
+        }
+      };
+      
       document.addEventListener("DOMContentLoaded", () => {
+        if (breakQuery){
+          const imageHeight = $golfImage.getBoundingClientRect().height;
+          $golfSection.style.height = `${imageHeight}px`;
+        }
         calculatinghHeight();
-
-        hiddingItems(tableItems, maxItems);
         $loadButton.addEventListener("click", () => {
           showingItems($tableParent.querySelectorAll(".hidden"), maxItems);
           $loadButton.classList.add("hidden");

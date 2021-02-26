@@ -57,6 +57,9 @@
     width: 100%;
     padding: 1rem;
     cursor: pointer;
+    @include respond-above(md){
+      display: none;
+    }
 
     &.hidden{
       display: none;

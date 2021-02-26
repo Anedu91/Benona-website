@@ -304,6 +304,7 @@ body {
   position: sticky;
   top: 0;
   background: #fff;
+  border-bottom: 2px solid #000;
 }
 @media (min-width: 47.9375em) {
   .benefits__fixed {
@@ -357,7 +358,7 @@ body {
 .benefits__title {
   font-size: 1.4rem;
   font-family: "DM Serif Display", serif;
-  padding: 2rem 1rem 0;
+  padding: 2rem 1rem 0.5rem;
   text-align: center;
   border-top: 1px solid #d8d8d8;
 }
@@ -387,8 +388,10 @@ body {
   padding: 1rem 0;
   font-weight: 700;
 }
-.benefits__sub-title.padding-top {
-  padding-top: 5rem;
+@media (min-width: 47.9375em) {
+  .benefits__sub-title.padding-top {
+    padding-top: 5rem;
+  }
 }
 
 .carousel {
@@ -789,6 +792,14 @@ body {
     grid-row: auto;
   }
 }
+.footer__sep {
+  display: none;
+}
+@media (min-width: 47.9375em) {
+  .footer__sep {
+    display: block;
+  }
+}
 
 .header__article {
   padding: 2.5rem 1.6875rem;
@@ -1047,6 +1058,11 @@ body {
   width: 100%;
   padding: 1rem;
   cursor: pointer;
+}
+@media (min-width: 61.9375em) {
+  .golf__button {
+    display: none;
+  }
 }
 .golf__button.hidden {
   display: none;
