@@ -458,12 +458,8 @@
         }
       };
       
+      calculatinghHeight();
       document.addEventListener("DOMContentLoaded", () => {
-        if (breakQuery){
-          const imageHeight = $golfImage.getBoundingClientRect().height;
-          $golfSection.style.height = `${imageHeight}px`;
-        }
-        calculatinghHeight();
         $loadButton.addEventListener("click", () => {
           showingItems($tableParent.querySelectorAll(".hidden"), maxItems);
           $loadButton.classList.add("hidden");
