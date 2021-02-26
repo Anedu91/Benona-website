@@ -1,17 +1,17 @@
 .carousel {
   position: relative;
 
-  .slick-dots{
+  .slick-dots {
     position: absolute;
-    bottom: 1.5rem;  
+    bottom: 1.5rem;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
     display: flex;
-    li{
-      &:not(:last-child){
-        margin-right: .5rem;
+    li {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
       }
-      button{
+      button {
         position: relative;
         background: transparent;
         border: 0;
@@ -21,13 +21,14 @@
         line-height: 0;
         font-size: 0;
         cursor: pointer;
-        &:hover, &:focus{
-          &:before{
+        &:hover,
+        &:focus {
+          &:before {
             opacity: 0.55;
           }
         }
-        &:before{
-          content: '\2022';
+        &:before {
+          content: "\2022";
           position: absolute;
           top: 0;
           left: 0;
@@ -38,31 +39,35 @@
         }
       }
     }
-    &.slick-active button:before{
-      opacity: .5;
+    &.slick-active button:before {
+      opacity: 0.5;
     }
   }
 }
-.carousel-rate{
+.carousel-rate {
   width: 100%;
   margin-bottom: 2rem;
-  &__item{
+  padding: 0 1rem;
+  &__item {
     margin-bottom: 1rem;
-    &:not(:last-child){
-      padding-right: 1.875rem;
+    &:not(:last-child) {
+      padding-right: 1rem;
+      @include respond-above(sm) {
+        padding-right: 1.875rem;
+      }
     }
   }
-  .slick-dots{
+  .slick-dots {
     position: absolute;
-    bottom: -2rem;  
+    bottom: -2rem;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
     display: flex;
-    li{
-      &:not(:last-child){
-        margin-right: .5rem;
+    li {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
       }
-      button{
+      button {
         position: relative;
         background: transparent;
         border: 0;
@@ -72,13 +77,14 @@
         line-height: 0;
         font-size: 0;
         cursor: pointer;
-        &:hover, &:focus{
-          &:before{
+        &:hover,
+        &:focus {
+          &:before {
             opacity: 0.55;
           }
         }
-        &:before{
-          content: '\2022';
+        &:before {
+          content: "\2022";
           position: absolute;
           top: 0;
           left: 0;
@@ -89,8 +95,8 @@
         }
       }
     }
-    &.slick-active button:before{
-      opacity: .5;
+    &.slick-active button:before {
+      opacity: 0.5;
     }
   }
 }

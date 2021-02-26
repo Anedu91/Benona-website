@@ -1,68 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat&display=swap");
+body {
   font-family: $regular-font;
 }
 
-%heading{
+%heading {
   font-family: $heading-font;
   font-weight: 400;
 }
-.heading{
-    &-1{
-        @extend %heading;
-        font-size: 4rem;
-        letter-spacing: 3px;        
-    }
-    &-2{      
-      @extend %heading;
-      font-size: 2.125rem;
-      line-height: 1.4;
-    }
-    &-3{
-      @extend %heading;
-      font-size: 1.5rem;
-    }
-    &-4{
-      text-transform: uppercase;
-      color: $gray-color;
-      font-size: 1rem;
-    }
-    &-5{
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-
-    }
+.heading {
+  &-1 {
+    @extend %heading;
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+  &-2 {
+    @extend %heading;
+    font-size: 2.125rem;
+    line-height: 1.4;
+  }
+  &-3 {
+    @extend %heading;
+    font-size: 1.5rem;
+  }
+  &-4 {
+    text-transform: uppercase;
+    color: $gray-color;
+    font-size: 1rem;
+  }
+  &-5 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 }
-.paragraph{
+.paragraph {
   font-size: 1rem;
   line-height: 1.5;
-  &--big{
+  &--big {
     font-size: 1.4rem;
-    margin-top: .25rem;
-  }  
+    margin-top: 0.25rem;
+  }
 }
-.link{
+.link {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid currentColor;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   font-weight: 700;
-  &--flex{
+  transition: 0.5s all;
+  &:hover {
+    font-size: 0.85rem;
+  }
+  &--flex {
     font-size: 1rem;
-    display: inline-flex;    
+    display: inline-flex;
     align-items: flex-end;
     font-family: $heading-font;
     letter-spacing: 1px;
     text-align: center;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     border-bottom: 1px solid currentColor;
+    &:hover .link__icon {
+      transform: translateY(-20%) translateX(0.5rem);
+    }
   }
-  &__icon{
-    margin-left: .5rem;
-    width: .8rem;
-    height: .8rem;
+  &__icon {
+    margin-left: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
     transform: translateY(-20%);
     fill: currentColor;
+    transition: 0.5s all;
   }
 }
