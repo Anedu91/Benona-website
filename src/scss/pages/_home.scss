@@ -1,5 +1,5 @@
 .home{
-  &__header{
+  &__header{    
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     @include respond-above(md){
-      background-image: url(../images/Benona_Home_header.jpg);
+      background-image: url(../images/Benona_Home_Header.jpg);
+    }
+    @include respond-above(lg){
+      min-height: 50rem;      
     }
     .heading-1{
       margin-top: auto;
@@ -19,7 +22,7 @@
   }
 
   &__article{
-    padding: 3.375rem 1.6875rem 4.625rem 3.375rem;
+    padding: 3.375rem 1.6875rem 4.625rem 1.6875rem;
     
     @include respond-above(sm){
       padding: 6.625rem 0 4.625rem 2.625rem;

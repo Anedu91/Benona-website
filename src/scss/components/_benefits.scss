@@ -96,6 +96,7 @@
       padding: 2rem 1rem;
       font-size: 2rem;
       border-top: 0;
+      text-align: left;
     }
     @include respond-above(md){
       font-size: 2.4rem;
@@ -105,6 +106,13 @@
       border-right: 1px solid #d8d8d8;
       @include respond-above(sm){
         border-right: 0;
+      }
+    }
+    .hide{
+      display: none;
+      background: none!important;
+      @include respond-above(md){
+        display: inline;
       }
     }
   }

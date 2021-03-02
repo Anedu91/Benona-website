@@ -1,3 +1,4 @@
+/*NAVBAR CONFIGURATION*/
 const $navButton = document.querySelector(".navbar__toggle");
 const $navigation = document.querySelector(".navbar__nav");
 const $closeButton = document.querySelector(".navbar__close");

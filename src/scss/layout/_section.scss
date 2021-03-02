@@ -31,6 +31,7 @@
   }
   &--grid-3{
     @extend %section;
+    background: rgba($gray-color,.1);
     display: grid;
     grid-template-columns: 1fr;
     @include respond-above(sm){

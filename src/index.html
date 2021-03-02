@@ -398,6 +398,7 @@
     <script src="js/vendors/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+      /*CAROUSEL CONFIG*/
       $(".carousel-rate").slick({
         arrows: false,
         dots: false,
@@ -423,7 +424,7 @@
         ],
       });
 
-     
+     /*TOGGLE CONFIGURATION*/
       const $rateButtons = document.querySelectorAll(".rates__nav-button");
       const $rateToggles = document.querySelectorAll(".rates__toggle");
       const removeActive = (elements) => {
@@ -435,13 +436,16 @@
       
       $rateButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
+          /*REMOVING AND ADDING THE ACTIVE STATE*/
           removeActive($rateButtons);
           btn.classList.add("active");
+          /*SHOWING THE NEW ACTIVE CONTAINER*/
           const targetToggle = document.getElementById(btn.dataset.target);
           removeActive($rateToggles);
           targetToggle.classList.add("active");
 
           if (btn.matches(".rates__nav-button.seasonal")) {
+            /*REWRITING THE CAROUSEL AFTER ACTIVE THE CONTAINER*/
             $(".carousel-rate").slick("destroy");
             $(".carousel-rate").slick("refresh");
           }

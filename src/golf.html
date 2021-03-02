@@ -121,13 +121,6 @@
               <td>363</td>
             </tr>
             <tr class="table__row">
-              <td class="table__title">hole 1</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
-            </tr>
-            <tr class="table__row">
               <td class="table__title">hole 2</td>
               <td>3</td>
               <td>128</td>
@@ -135,7 +128,7 @@
               <td>87</td>
             </tr>
             <tr class="table__row">
-              <td class="table__title">hole 1</td>
+              <td class="table__title">hole 3</td>
               <td>3</td>
               <td>151</td>
               <td>136</td>
@@ -144,100 +137,107 @@
             <tr class="table__row">
               <td class="table__title">hole 4</td>
               <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>337</td>
+              <td>312</td>
+              <td>280</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 5</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>211</td>
+              <td>186</td>
+              <td>150</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 6</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>140</td>
+              <td>124</td>
+              <td>103</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 7</td>
               <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>347</td>
+              <td>320</td>
+              <td>300</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 8</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>177</td>
+              <td>162</td>
+              <td>141</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 9</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>183</td>
+              <td>170</td>
+              <td>143</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 10</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>215</td>
+              <td>175</td>
+              <td>140</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__title">hole 11</td>
+              <td>3</td>
+              <td>229</td>
+              <td>205</td>
+              <td>177</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 12</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>135</td>
+              <td>120</td>
+              <td>100</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 13</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>215</td>
+              <td>183</td>
+              <td>171</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 14</td>
               <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>400</td>
+              <td>395</td>
+              <td>325</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 15</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>210</td>
+              <td>192</td>
+              <td>135</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 16</td>
               <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>333</td>
+              <td>329</td>
+              <td>300</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 17</td>
               <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>393</td>
+              <td>380</td>
+              <td>325</td>
             </tr>
             <tr class="table__row">
               <td class="table__title">hole 18</td>
-              <td>4</td>
-              <td>386</td>
-              <td>374</td>
-              <td>363</td>
+              <td>3</td>
+              <td>190</td>
+              <td>170</td>
+              <td>136</td>
             </tr>
           </table>
           <button class="golf__button">Load All</button>
@@ -435,6 +435,7 @@
       const maxItems = 11;
       const $loadButton = document.querySelector(".golf__button");
 
+      /*FUNCTIONS FOR HIDING ROWS*/
       const hiddingItems = (items, maxItems) => {
         [].forEach.call(items, (item, idx) => {
           if (idx > maxItems - 1) {
@@ -442,12 +443,12 @@
           }
         });
       };
+      /*REMOVING HIDINGS AFTER CLICK*/
       const removinghidding = (items) => {
         [].forEach.call(items, (item, idx) => {
           item.classList.remove("hidden");
         })
-      }
-      
+      }      
       const showingItems = (items, maxItems) => {
         [].forEach.call(items, (item, idx) => {
           if (idx < maxItems - 1) {
@@ -457,25 +458,32 @@
       };
       
       const calculatinghHeight = async () => {
+        /*BREAKPOINT IN 1200PX */
         if (breakQuery.matches) {
-          const imageHeight = await $golfImage.getBoundingClientRect().height;
-          
+          /*CALCULATING MAP HEIGHT*/
+          const imageHeight = await $golfImage.getBoundingClientRect().height;          
           $golfSection.style.height = `${imageHeight}px`;
           removinghidding(tableItems)
         } else {
           $golfSection.style.height = `auto`;
-          hiddingItems(tableItems, maxItems);
+          
         }
       };      
-      window.onload = () => {
+      /*SETTING INITIAL MAP HEIGHT*/
+      window.onload = () => {        
         calculatinghHeight();
       }
       document.addEventListener("DOMContentLoaded", () => {
+        /*HIDDING ITEMS IF QUERY < 1200PX*/
+        if (!breakQuery.matches){
+          hiddingItems(tableItems, maxItems);
+        }
         $loadButton.addEventListener("click", () => {
           showingItems($tableParent.querySelectorAll(".hidden"), maxItems);
           $loadButton.classList.add("hidden");
         });
         window.addEventListener("resize", () => {
+          /*RESIZING THE MAP*/
           calculatinghHeight();
         });
       });

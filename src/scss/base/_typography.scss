@@ -23,7 +23,8 @@ body {
     font-size: 1.5rem;
   }
   &-4 {
-    text-transform: uppercase;
+    @extend %heading;
+    text-transform: uppercase;    
     color: $gray-color;
     font-size: 1rem;
   }
@@ -64,11 +65,13 @@ body {
     padding: 0.5rem 0;
     border-bottom: 1px solid currentColor;
     &:hover .link__icon {
-      transform: translateY(-20%) translateX(0.5rem);
+      left: .75rem;
     }
   }
   &__icon {
+    position: relative;
     margin-left: 0.5rem;
+    left: 0;
     width: 0.8rem;
     height: 0.8rem;
     transform: translateY(-20%);
